@@ -6,6 +6,7 @@ import com.amazon.ata.kindlepublishingservice.publishing.KindleFormattedBook;
 import com.amazon.ata.kindlepublishingservice.utils.KindlePublishingUtils;
 
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMapper;
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMapperConfig;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBQueryExpression;
 import org.apache.commons.lang3.StringUtils;
 
@@ -57,5 +58,13 @@ public class CatalogDao {
             return null;
         }
         return results.get(0);
+    }
+
+    public CatalogItemVersion softDeleteBookFromCatalog(String bookId) {
+       CatalogItemVersion bookEntry = getBookFromCatalog(bookId);
+       bookEntry.setInactive(true);
+
+        dynamoDbMapper.save(bookEntry);
+        return bookEntry;
     }
 }
