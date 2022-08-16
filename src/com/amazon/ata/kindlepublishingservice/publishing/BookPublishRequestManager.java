@@ -7,7 +7,7 @@ import javax.inject.Singleton;
 import java.util.concurrent.ConcurrentLinkedQueue;
 
 public class BookPublishRequestManager {
-    ConcurrentLinkedQueue<BookPublishRequest> bookPublishRequestQueue = new ConcurrentLinkedQueue<>();
+    ConcurrentLinkedQueue<BookPublishRequest> bookPublishRequestQueue;
 
     @Inject
     public  BookPublishRequestManager(ConcurrentLinkedQueue<BookPublishRequest> queue) {
