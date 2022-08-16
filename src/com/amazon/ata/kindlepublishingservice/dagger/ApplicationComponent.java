@@ -5,6 +5,7 @@ import com.amazon.ata.kindlepublishingservice.activity.GetPublishingStatusActivi
 import com.amazon.ata.kindlepublishingservice.activity.RemoveBookFromCatalogActivity;
 import com.amazon.ata.kindlepublishingservice.activity.SubmitBookForPublishingActivity;
 import dagger.Component;
+import dagger.Provides;
 
 import javax.inject.Singleton;
 
