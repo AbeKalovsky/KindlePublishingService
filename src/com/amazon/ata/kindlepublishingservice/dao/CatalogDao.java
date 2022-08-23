@@ -9,6 +9,7 @@ import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMapper;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMapperConfig;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBQueryExpression;
 import org.apache.commons.lang3.StringUtils;
+import org.checkerframework.checker.units.qual.C;
 
 import java.util.List;
 import javax.inject.Inject;
@@ -67,11 +68,39 @@ public class CatalogDao {
         dynamoDbMapper.save(bookEntry);
         return bookEntry;
     }
-    public void validateBookExists(String bookId) {
+    public CatalogItemVersion validateBookExists(String bookId) {
         CatalogItemVersion catalogItemVersion = getLatestVersionOfBook(bookId);
         if (catalogItemVersion == null) {
             throw new BookNotFoundException("book is not in the catalog :" + bookId );
         }
+        return catalogItemVersion;
+    }
 
+    public CatalogItemVersion createOrUpdateBook(KindleFormattedBook kindleFormattedBook) {
+        CatalogItemVersion createCatalogItemVersion = new CatalogItemVersion();
+        createCatalogItemVersion.setBookId(kindleFormattedBook.getBookId());
+
+        if (createCatalogItemVersion.getBookId() == null) {
+            createCatalogItemVersion.setBookId(KindlePublishingUtils.generateBookId());
+            createCatalogItemVersion.setAuthor(kindleFormattedBook.getAuthor());
+            createCatalogItemVersion.setGenre(kindleFormattedBook.getGenre());
+            createCatalogItemVersion.setText(kindleFormattedBook.getText());
+            createCatalogItemVersion.setTitle(kindleFormattedBook.getTitle());
+            createCatalogItemVersion.setVersion(1);
+            dynamoDbMapper.save(createCatalogItemVersion);
+
+        } else {
+            createCatalogItemVersion = getLatestVersionOfBook(kindleFormattedBook.getBookId());
+            CatalogItemVersion oldEntry = validateBookExists(kindleFormattedBook.getBookId());
+            softDeleteBookFromCatalog(oldEntry.getBookId());
+            createCatalogItemVersion.setVersion(createCatalogItemVersion.getVersion() + 1);
+            dynamoDbMapper.save(createCatalogItemVersion);
+        }
+
+
+
+
+
+     return  createCatalogItemVersion;
     }
 }

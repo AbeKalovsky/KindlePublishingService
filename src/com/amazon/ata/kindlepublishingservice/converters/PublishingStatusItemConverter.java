@@ -21,7 +21,7 @@ public class PublishingStatusItemConverter {
     }
 
     public static List<PublishingStatusRecord> toRecordList(List<PublishingStatusItem> publishingStatusItems) {
-       List<PublishingStatusRecord> publishingStatusRecords = new ArrayList<>();
+        List<PublishingStatusRecord> publishingStatusRecords = new ArrayList<>();
         for (PublishingStatusItem e: publishingStatusItems) {
             publishingStatusRecords.add(toRecord(e));
         }
