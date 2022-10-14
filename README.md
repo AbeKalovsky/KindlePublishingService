@@ -69,7 +69,7 @@ My Contributions:
 ### [Mastery Task 2: Submit to the process](tasks/MasteryTask02.md)
 
 My Contributions:
-- [BookPublishRequestManger](src/com/amazon/ata/kindlepublishingservice/publishing/BookPublishingRequestManager.java)  
+- [BookPublishRequestManger](src/com/amazon/ata/kindlepublishingservice/publishing/BookPublishRequestManager.java)  
 - [SubmitBookForPublishingActivity](src/com/amazon/ata/kindlepublishingservice/activity/SubmitBookForPublishingActivity.java) 
 
 ### [Mastery Task 3: Query, query on the wall, don’t load one, get them all!](tasks/MasteryTask03.md)
