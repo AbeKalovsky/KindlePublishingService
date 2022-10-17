@@ -71,6 +71,7 @@ My Contributions:
 
 My Contributions:
 - [BookPublishRequestManger](src/com/amazon/ata/kindlepublishingservice/publishing/BookPublishRequestManager.java)  
+- [CatalogDao](https://github.com/AbeKalovsky/kindle_publishing_service/commit/b2db2de9c5d7ca3c926771ce66c786c5b4622d20#diff-1e0d63a2b6ec3ceaca2b52a387c966bccffb587c829fa5528b1954afdb4b8845)
 - [SubmitBookForPublishingActivity](src/com/amazon/ata/kindlepublishingservice/activity/SubmitBookForPublishingActivity.java) 
 
 ### [Mastery Task 3: Query, query on the wall, don’t load one, get them all!](tasks/MasteryTask03.md)
