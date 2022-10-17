@@ -79,6 +79,7 @@ My Contributions:
 
 My Contributions:
 - [DynamoDB Query](src/com/amazon/ata/kindlepublishingservice/dao/PublishingStatusDao.java)
+- [PublishingStatusItemConverter](https://github.com/AbeKalovsky/kindle_publishing_service/commit/de0a071cde19c7ba6c0e34c4f522144232a71534#diff-a28698e34b6a18c6505399fca3fba8b1820ee0eaf5b98c187abaae1583359cb0)
 - [GetPublishingStatus](src/com/amazon/ata/kindlepublishingservice/activity/GetPublishingStatusActivity.java) 
 
 ### [Mastery Task 4: Make a run(nable) for it](tasks/MasteryTask04.md)
