@@ -65,13 +65,14 @@ My Contributions:
 - [Class diagram](src/resources/mastery-task1-kindle-publishing-CD.puml)  
 - [Sequence diagram](src/resources/mastery-task1-remove-book-SD.puml)  
 - [RemoveBookActivity](https://github.com/AbeKalovsky/kindle_publishing_service/commit/5431a9b1009d76d2338516e3409f4cbe87655c89#diff-425953d684a72c3bf3cfd03b7640ef448c58a593f6132aa59de3fdd966212fc4)
-- [Soft Delete](src/com/amazon/ata/kindlepublishingservice/dao/CatalogDao.java)  
+- [SoftDelete](src/com/amazon/ata/kindlepublishingservice/dao/CatalogDao.java)  
 
 ### [Mastery Task 2: Submit to the process](tasks/MasteryTask02.md)
 
 My Contributions:
 - [BookPublishRequestManger](src/com/amazon/ata/kindlepublishingservice/publishing/BookPublishRequestManager.java)  
-- [CatalogDao](https://github.com/AbeKalovsky/kindle_publishing_service/commit/b2db2de9c5d7ca3c926771ce66c786c5b4622d20#diff-1e0d63a2b6ec3ceaca2b52a387c966bccffb587c829fa5528b1954afdb4b8845)
+- [Catalog Dao](https://github.com/AbeKalovsky/kindle_publishing_service/commit/b2db2de9c5d7ca3c926771ce66c786c5b4622d20#diff-1e0d63a2b6ec3ceaca2b52a387c966bccffb587c829fa5528b1954afdb4b8845)
+- [PublishingModule](https://github.com/AbeKalovsky/kindle_publishing_service/commit/b2db2de9c5d7ca3c926771ce66c786c5b4622d20#diff-6bc374721e69142088e9589ab90032e1bf375a94ffb5b42e26e14178a938c8bd)
 - [SubmitBookForPublishingActivity](src/com/amazon/ata/kindlepublishingservice/activity/SubmitBookForPublishingActivity.java) 
 
 ### [Mastery Task 3: Query, query on the wall, don’t load one, get them all!](tasks/MasteryTask03.md)
